@@ -1,0 +1,1 @@
+{"idle": [0, 3], "run": [4, 9], "jump": [10, 13], "fall": [14, 15], "attack1": [16, 20], "attack2": [21, 26], "attack3": [27, 32], "air-attack1": [33, 36], "hurt": [37, 39], "die": [40, 46], "slide": [47, 48], "crouch": [49, 52], "wall-slide": [53, 54], "smrslt": [55, 58], "cast-loop": [59, 62]}
