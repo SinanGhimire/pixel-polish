@@ -1,0 +1,1235 @@
+[
+  {
+    "id": "k00",
+    "name": "Dusk Woods",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        336,
+        384
+      ],
+      [
+        336,
+        384
+      ],
+      [
+        336,
+        384
+      ],
+      [
+        336,
+        384
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p00",
+    "name": "Dusk City",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        320,
+        180
+      ],
+      [
+        320,
+        180
+      ],
+      [
+        320,
+        180
+      ],
+      [
+        320,
+        180
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p31",
+    "name": "Industrial Quarter",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        272,
+        160
+      ],
+      [
+        272,
+        160
+      ],
+      [
+        272,
+        160
+      ],
+      [
+        272,
+        160
+      ]
+    ],
+    "props": [],
+    "music": "industrial"
+  },
+  {
+    "id": "k01",
+    "name": "Lost Glades",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        336,
+        272
+      ],
+      [
+        128,
+        272
+      ],
+      [
+        240,
+        272
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p01",
+    "name": "Future City 1",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k02",
+    "name": "Deep Cave",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        176,
+        192
+      ],
+      [
+        160,
+        192
+      ],
+      [
+        192,
+        160
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k10",
+    "name": "Lonely Mine",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        544,
+        400
+      ],
+      [
+        544,
+        400
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p02",
+    "name": "Future City 2",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k03",
+    "name": "Forgotten Cemetery",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        512,
+        272
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p03",
+    "name": "Future City 3",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k04",
+    "name": "Blood Mansion",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        192,
+        272
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p04",
+    "name": "Future City 4",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k11",
+    "name": "Tower",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        256,
+        192
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k05",
+    "name": "Castle Hall",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        224,
+        336
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p05",
+    "name": "Neon Spires",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ],
+      [
+        630,
+        360
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k06",
+    "name": "Dungeon Prison",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        256,
+        176
+      ],
+      [
+        336,
+        336
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p06",
+    "name": "Bulkhead Deck",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        352,
+        224
+      ],
+      [
+        352,
+        224
+      ],
+      [
+        352,
+        224
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k07",
+    "name": "Muddy Swamp",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        480,
+        272
+      ],
+      [
+        480,
+        272
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p07",
+    "name": "City 1",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k08",
+    "name": "Scarlet Monastery",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        480,
+        272
+      ],
+      [
+        480,
+        272
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p08",
+    "name": "City 2",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "k09",
+    "name": "Palace",
+    "outdoor": false,
+    "floor": true,
+    "layers": [
+      [
+        384,
+        208
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p09",
+    "name": "City 3",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p10",
+    "name": "City 4",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p11",
+    "name": "City 5",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p12",
+    "name": "City 6",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p13",
+    "name": "City 7",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p14",
+    "name": "City 8",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p15",
+    "name": "Skyline 1 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p16",
+    "name": "Skyline 1 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p17",
+    "name": "Skyline 2 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p18",
+    "name": "Skyline 2 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p19",
+    "name": "Skyline 3 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p20",
+    "name": "Skyline 3 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p21",
+    "name": "Skyline 4 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p22",
+    "name": "Skyline 4 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p23",
+    "name": "Skyline 5 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p24",
+    "name": "Skyline 5 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p25",
+    "name": "Skyline 6 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p26",
+    "name": "Skyline 6 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p27",
+    "name": "Skyline 7 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p28",
+    "name": "Skyline 7 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p29",
+    "name": "Skyline 8 Day",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  },
+  {
+    "id": "p30",
+    "name": "Skyline 8 Night",
+    "outdoor": true,
+    "floor": true,
+    "layers": [
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ],
+      [
+        576,
+        324
+      ]
+    ],
+    "props": []
+  }
+]
