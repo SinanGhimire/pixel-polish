@@ -1,4 +1,10 @@
-# Fix 12 maps, assets, parallax
+# Fix maps, assets, parallax and matching platforms
+
+- [ ] Add clean maps from parallax-2.zip
+- [ ] Remove Bulkhead Deck and Future City 1, 3, 4
+- [ ] Repair broken scenery and replace mismatched floors for every map
+- [ ] Align visible feet with platform surfaces
+- [ ] Fix existing Phaser packaging error
 
 - [~] Re-host 321 game assets from old project CDN to this project (running in background)
 - [ ] Inspect original map pack PNGs (dims, alpha, clean vs mockup)
