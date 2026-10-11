@@ -11,7 +11,7 @@ import { WaveManager } from "./WaveManager";
 import { soulsForRun, addXp, applyUpgrade, comboMultiplier, freshStats, heal, pickUpgrades, resolveIncoming, waveScaling, xpForLevel, type Stats } from "./rules";
 import { SaveManager, type Settings } from "./save";
 import { heroById } from "./heroes";
-import { parallaxLayout } from "./parallax";
+import { parallaxLayout, repeatedLayerPositions, floorBaseline } from "./parallax";
 
 export type GameState = "PLAYING" | "PAUSED" | "WAVE_TRANSITION" | "LEVEL_UP" | "SHOP" | "BOSS_INTRO" | "BOSS_FIGHT" | "PORTAL" | "GAME_OVER";
 export type TouchInput = { left: boolean; right: boolean; jump: boolean; attack: boolean; dash: boolean; block: boolean; special: boolean };
@@ -56,7 +56,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyHost, EchoHost {
   boss: Enemy | undefined;
   bossSpawned = new Set<number>();
   hitstopUntil = 0;
-  bgs: Phaser.GameObjects.TileSprite[] = [];
+  bgs: { images: Phaser.GameObjects.Image[]; sourceWidth: number; scale: number; originX: number; viewportWidth: number; speed: number }[] = [];
   mapObjects: Phaser.GameObjects.GameObject[] = [];
   mapColliders: Phaser.Physics.Arcade.Collider[] = [];
   mapIndex = 0;
@@ -259,28 +259,43 @@ export class ArenaScene extends Phaser.Scene implements EnemyHost, EchoHost {
     const sh = this.scale.height / z;
     const ox = (this.scale.width - sw) / 2;
     const oy = (this.scale.height - sh) / 2;
-    const layouts = parallaxLayout(def.layers, sw, sh, def.floor ? H * T : 0);
+    const floor = floorBaseline(ROWS, T, H);
+    const layouts = parallaxLayout(def.layers, sw, floor, 0);
     // Shared artboard scale; shorter exports are anchored to the same floor.
     def.layers.forEach((l, i) => {
       const layout = layouts[i];
       if (!layout) return;
-      const ts = this.add.tileSprite(ox, oy + layout.y, sw, layout.height, `bg_${def.id}_${i}`).setOrigin(0).setScrollFactor(0).setDepth(-20 + i);
-      ts.setTileScale(layout.scale);
-      this.bgs.push(ts);
-      this.mapObjects.push(ts);
+      const sourceWidth = l[0] ?? 1;
+      const positions = repeatedLayerPositions(sourceWidth, layout.scale, sw, 0);
+      const images = positions.map((position) => this.add.image(ox + position.x, floor - layout.height, `bg_${def.id}_${i}`)
+        .setOrigin(0).setScrollFactor(0, 1).setScale(layout.scale).setFlipX(position.flipX).setDepth(-20 + i));
+      this.bgs.push({ images, sourceWidth, scale: layout.scale, originX: ox, viewportWidth: sw, speed: 0.03 + (i / Math.max(1, def.layers.length - 1)) * 0.45 });
+      this.mapObjects.push(...images);
     });
     // flat floor from the map's tileset (row 0 = surface, rows 1-2 = fill)
     const data: number[][] = [];
     for (let y = 0; y < ROWS; y++) data.push(new Array(COLS).fill(-1));
     const top = ROWS - H;
-    for (let x = 0; x < COLS; x++) for (let y = top; y < ROWS; y++) data[y]![x] = (y === top ? 0 : y === top + 1 ? 3 : 6) + (x % 3);
+    for (let x = 0; x < COLS; x++) for (let y = top; y < ROWS; y++) {
+      const row = data[y];
+      if (row) row[x] = 0;
+    }
     const map = this.make.tilemap({ data, tileWidth: T, tileHeight: T });
-    const tileset = map.addTilesetImage(`ground_${def.id}`, `ground_${def.id}`, T, T, 0, 0)!;
+    const tileset = map.addTilesetImage(`ground_${def.id}`, `ground_${def.id}`, T, T, 0, 0);
+    if (!tileset) return;
     // Phaser keeps class fields across restarts, but the previous scene objects are destroyed.
     const old = this.layer;
-    this.layer = map.createLayer(0, tileset, 0, 0)!.setDepth(4).setVisible((def as { floor?: boolean }).floor === true);
+    const collisionLayer = map.createLayer(0, tileset, 0, 0);
+    if (!collisionLayer) return;
+    this.layer = collisionLayer.setVisible(false);
     this.layer.setCollisionByExclusion([-1]);
     this.mapObjects.push(this.layer);
+    // Draw complete exported surface strips, not arbitrary cells of a tileset.
+    const ground = this.textures.get(`ground_${def.id}`).getSourceImage();
+    const groundWidth = ground.width;
+    for (let x = 0, tile = 0; x < COLS * T; x += groundWidth, tile++) {
+      this.mapObjects.push(this.add.image(x, floor, `ground_${def.id}`).setOrigin(0).setDepth(4).setFlipX(tile % 2 === 1));
+    }
     if (old) {
       this.mapColliders.forEach((c) => c.destroy());
       // sweep any collider still pointing at the old floor
@@ -294,7 +309,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyHost, EchoHost {
       for (const e of this.echoes) this.mapColliders.push(this.physics.add.collider(e.sprite, this.layer));
     }
     // set dressing from the pack's props, standing on the floor
-    const floorY = top * T + 2;
+    const floorY = floor;
     const rnd = new Phaser.Math.RandomDataGenerator([def.id]);
     const n = def.props.length;
     if (n) {
@@ -835,7 +850,13 @@ export class ArenaScene extends Phaser.Scene implements EnemyHost, EchoHost {
   override update(time: number) {
     const cam = this.cameras.main;
     // Camera-driven depth only: architectural layers must not drift apart while idle.
-    if (this.bgs.length > 1) this.bgs.forEach((b, i) => (b.tilePositionX = cam.scrollX * (0.03 + (i / Math.max(1, this.bgs.length - 1)) * 0.45) / b.tileScaleX));
+    this.bgs.forEach((b) => {
+      const positions = repeatedLayerPositions(b.sourceWidth, b.scale, b.viewportWidth, Math.round(cam.scrollX * b.speed));
+      b.images.forEach((image, i) => {
+        const position = positions[i];
+        if (position) image.setX(b.originX + position.x).setFlipX(position.flipX);
+      });
+    });
 
     if (Phaser.Input.Keyboard.JustDown(this.keys["ESC"]!) || Phaser.Input.Keyboard.JustDown(this.keys["P"]!)) this.bus.emit("pause");
 
